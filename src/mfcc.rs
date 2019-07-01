@@ -91,7 +91,7 @@ impl Transform {
         #[cfg(feature = "fftextern")]
         let means = AlignedVec::new(maxfilter * 3);
 
-        self.mean_coeffs = means;
+        self.mean_coeffs = means.to_vec();
 
         self
     }
